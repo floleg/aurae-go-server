@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 )
 
 type generic struct {
@@ -39,6 +40,8 @@ func memoryFlood(w http.ResponseWriter, _ *http.Request) {
 }
 
 func main() {
+	log.SetOutput(os.Stdout)
+
 	http.HandleFunc("/", root)
 	http.HandleFunc("/flood", memoryFlood)
 

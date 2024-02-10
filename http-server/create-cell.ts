@@ -13,9 +13,10 @@ let allocated = await cellService.allocate(<cells.CellServiceAllocateRequest>{
             max: 400 * (10 ** 3), // 0.4 seconds in microseconds
         }),
         memory: cells.MemoryController.fromPartial({
-            high: 5000000, // 50k
-            max: 10000000, // 100k
+            high: 1000000,
+            max: 4000000,
         })
     })
 });
+
 console.log('Allocated:', allocated)

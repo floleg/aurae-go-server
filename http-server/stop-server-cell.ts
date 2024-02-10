@@ -1,7 +1,5 @@
-#!/usr/bin/env auraescript
-
-import * as aurae from "../../aurae/auraescript/gen/aurae";
-import * as cells from "../../aurae/auraescript/gen/cells";
+import * as aurae from "../../aurae/auraescript/gen/aurae.ts";
+import * as cells from "../../aurae/auraescript/gen/cells.ts";
 
 let client = await aurae.createClient();
 let cellService = new cells.CellServiceClient(client);

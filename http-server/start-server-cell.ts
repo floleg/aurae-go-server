@@ -9,7 +9,7 @@ let started = await cellService.start(<cells.CellServiceStartRequest>{
     cellName: cellName,
     executable: cells.Executable.fromPartial({
         command: "/home/florent/devel/aurae-go-server/http-server/source/target/http-server",
-        description: "Run a simple http source",
+        description: "Run a simple http server",
         name: cellName
     })
 })

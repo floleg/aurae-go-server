@@ -12,11 +12,11 @@ let allocated = await cellService.allocate(<cells.CellServiceAllocateRequest>{
         name: cellName,
         cpu: cells.CpuController.fromPartial({
             weight: 2, // Percentage of CPUs
-            max: 1000 * (10 ** 3), // 0.4 seconds in microseconds
+            max: 1000 * (10 ** 3), // 1 seconds in microseconds
         }),
         memory: cells.MemoryController.fromPartial({
-            high: 1000000,
-            max: 10000000,
+            high: 100000000, //100MB
+            max: 500000000, //500MB
         }),
     })
 });
